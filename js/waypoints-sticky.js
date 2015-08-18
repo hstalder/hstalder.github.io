@@ -8,7 +8,7 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 
   (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
-      return define(['jquery', 'waypoints'], factory);
+      return define(['jquery.min', 'waypoints'], factory);
     } else {
       return factory(root.jQuery);
     }
