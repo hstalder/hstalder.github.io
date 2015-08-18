@@ -79,25 +79,25 @@ jQuery(function ($) {
 			thumbnail_navigation: 0,			// Thumbnail navigation
 			slides: [	// Slideshow Images
 				{
-					image: '_include/img/slider-images/image01.jpg',
+					image: 'img/slider-images/image01.jpg',
 					title: '<div class="slide-content">Melodrama-Chörli</div>',
 					thumb: '',
 					url: ''
 				},
 				{
-					image: '_include/img/slider-images/image02.jpg',
+					image: 'img/slider-images/image02.jpg',
 					title: '<div class="slide-content">Melodrama-Chörli</div>',
 					thumb: '',
 					url: ''
 				},
 				{
-					image: '_include/img/slider-images/image03.jpg',
+					image: 'img/slider-images/image03.jpg',
 					title: '<div class="slide-content">Melodrama-Chörli</div>',
 					thumb: '',
 					url: ''
 				},
 				{
-					image: '_include/img/slider-images/image04.jpg',
+					image: 'img/slider-images/image04.jpg',
 					title: '<div class="slide-content">Melodrama-Chörli</div>',
 					thumb: '',
 					url: ''
@@ -225,7 +225,7 @@ jQuery(function ($) {
 		var valueTop = -64; // Margin Top Value
 
 		$("#ticker").tweet({
-			modpath: '_include/js/twitter/',
+			modpath: 'js/twitter/',
 			username: "Bluxart", // Change this with YOUR ID
 			page: 1,
 			avatar_size: 0,
@@ -410,7 +410,7 @@ jQuery(function ($) {
 		Modernizr.load([
 			{
 				test: Modernizr.placeholder,
-				nope: '_include/js/placeholder.js',
+				nope: 'js/placeholder.js',
 				complete: function () {
 					if (!Modernizr.placeholder) {
 						Placeholders.init({
