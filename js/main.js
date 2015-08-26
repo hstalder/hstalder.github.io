@@ -302,14 +302,34 @@ jQuery(function ($) {
 			$(this).addClass('active');
 		});
 
-		$('.image-wrap').bind('touchstart', function () {
-			$(".active").removeClass("active");
-			$(this).addClass('active');
+		$('.image-wrap').bind('touchstart', function (event) {
+			if ($(this).hasClass("active")) $(this).removeClass('active');
+			else {
+				$(".active").removeClass("active");
+				$(this).addClass('active');
+			}
+			event.preventDefault();
 		});
 
 		$('#social ul li').bind('touchstart', function () {
 			$(".active").removeClass("active");
 			$(this).addClass('active');
+		});
+
+		$('.social').on('touchstart click', 'a', function(e) {
+			var icon = $(this).find('i');
+			if (icon.hasClass("font-icon-social-twitter")) {
+				if (Modernizr.mobile) {
+					window.open($(this).attr('href'), '_blank');
+				}
+			} else if (icon.hasClass("font-icon-social-facebook")) {
+				if (Modernizr.mobile) {
+					window.open($(this).attr('href'), '_blank');
+				}
+			} else if (icon.hasClass("font-icon-social-google-plus")) {
+				console.log("*** Google+");
+			}
+			e.preventDefault();
 		});
 
 	};
@@ -414,6 +434,33 @@ jQuery(function ($) {
 		BRUSHED.accordion();
 		BRUSHED.toggle();
 		BRUSHED.toolTip();
+
+		// Determine, whether it's a mobile device and add
+		var ua = navigator.userAgent;
+		var platform = navigator.platform;
+		var os = this.os = {},
+				android = ua.match(/(Android);?[\s\/]+([\d.]+)?/),
+				ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+				ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/),
+				iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+				wp = ua.match(/Windows Phone ([\d.]+)/),
+				blackberry = ua.match(/(BlackBerry).*Version\/([\d.]+)/),
+				bb10 = ua.match(/(BB10).*Version\/([\d.]+)/),
+				firefoxos = ua.match(/\((?:Mobile|Tablet); rv:([\d.]+)\).*Firefox\/[\d.]+/);
+
+		if (android) os.android = true;
+		if (iphone && !ipod) os.ios = os.iphone = true;
+		if (ipad) os.ios = os.ipad = true;
+		if (ipod) os.ios = os.ipod = true;
+		if (wp) os.wp = true;
+		if (blackberry) os.blackberry = true;
+		if (bb10) os.bb10 = true;
+		if (firefoxos) os.firefoxos = true;
+
+		Modernizr.addTest('mobile', function () {
+			return (os.android || os.ios || os.wp || os.blackberry || os.bb10 || os.firefoxos);
+		});
+
 	});
 
 	$(window).resize(function () {
