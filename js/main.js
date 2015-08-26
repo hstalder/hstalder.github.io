@@ -311,23 +311,20 @@ jQuery(function ($) {
 			event.preventDefault();
 		});
 
-		$('#social ul li').bind('touchstart', function () {
-			$(".active").removeClass("active");
-			$(this).addClass('active');
-		});
-
 		$('.social').on('touchstart click', 'a', function(e) {
-			var icon = $(this).find('i');
-			if (icon.hasClass("font-icon-social-twitter")) {
-				if (Modernizr.mobile) {
-					window.open($(this).attr('href'), '_blank');
+			var href = $(this).attr('href');
+			if (href.length > 1) {
+				var icon = $(this).find('i');
+				// twitter/facebook/google+ deep links on mobile, mail on browser & mobile
+				if (icon.hasClass("font-icon-social-twitter")) {
+					if (Modernizr.mobile) { window.open(href, '_blank'); }
+				} else if (icon.hasClass("font-icon-social-facebook")) {
+					if (Modernizr.mobile) { window.open(href, '_blank'); }
+				} else if (icon.hasClass("font-icon-social-google-plus")) {
+					if (Modernizr.mobile) { window.open(href, '_blank'); }
+				} else if (icon.hasClass("font-icon-social-email")) {
+					window.open(href, '_self');
 				}
-			} else if (icon.hasClass("font-icon-social-facebook")) {
-				if (Modernizr.mobile) {
-					window.open($(this).attr('href'), '_blank');
-				}
-			} else if (icon.hasClass("font-icon-social-google-plus")) {
-				console.log("*** Google+");
 			}
 			e.preventDefault();
 		});
