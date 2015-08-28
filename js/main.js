@@ -297,12 +297,12 @@ jQuery(function ($) {
 
 	BRUSHED.utils = function () {
 
-		$('.item-thumbs').bind('touchstart', function () {
+		$('.item-thumbs').on('tap', function () {
 			$(".active").removeClass("active");
 			$(this).addClass('active');
 		});
 
-		$('.image-wrap').bind('touchstart', function (event) {
+		$('.image-wrap').on('tap', function (event) {
 			if ($(this).hasClass("active")) $(this).removeClass('active');
 			else {
 				$(".active").removeClass("active");
@@ -432,7 +432,7 @@ jQuery(function ($) {
 		BRUSHED.toggle();
 		BRUSHED.toolTip();
 
-		// Determine, whether it's a mobile device and add
+		// Determine, whether it's a mobile device and add the result to Modernizr
 		var ua = navigator.userAgent;
 		var platform = navigator.platform;
 		var os = this.os = {},
