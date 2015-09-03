@@ -297,21 +297,35 @@ jQuery(function ($) {
 
 	BRUSHED.utils = function () {
 
+		var hasMSPrefix = window.MSPointerEvent; // check for MS vendor prefix
+		var pointerEvents = {
+			'pointerdown': hasMSPrefix ? "MSPointerDown" : 'pointerdown',
+			'pointermove': hasMSPrefix ? "MSPointerMove" : 'pointermove',
+			'pointerup': hasMSPrefix ? "MSPointerUp" : 'pointerup',
+			'pointercancel': hasMSPrefix ? "MSPointerCancel" : 'pointercancel'
+		};
+		var hasPointer = navigator.msPointerEnabled || false; // MS feature detection
+		var touchStartEvent = hasPointer ? pointerEvents['pointerdown'] : "touchstart";
+		var touchEndEvent = hasPointer ? pointerEvents['pointerup'] : "touchend";
+
 		$('.item-thumbs').on('tap', function () {
 			$(".active").removeClass("active");
 			$(this).addClass('active');
 		});
 
-		$('.image-wrap').on('tap', function (event) {
+		var imageWrap = $('.image-wrap');
+		imageWrap.on(touchStartEvent + ' ' + touchEndEvent, function (event) { event.preventDefault(); });
+		imageWrap.on('tap', function (event) {
 			if ($(this).hasClass("active")) $(this).removeClass('active');
 			else {
 				$(".active").removeClass("active");
 				$(this).addClass('active');
 			}
 			event.preventDefault();
+			event.stopPropagation();
 		});
 
-		$('.social').on('touchstart click', 'a', function(e) {
+		$('.social').on(touchEndEvent + ' click', 'a', function(e) {
 			var href = $(this).attr('href');
 			if (href.length > 1) {
 				var icon = $(this).find('i');
