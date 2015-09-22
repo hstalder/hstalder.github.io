@@ -310,7 +310,7 @@ h3.spec {
 #home-slider .slider-text {
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 66%;
 	margin: -150px 0 0 -585px;
 	width: 1170px;
 	height: 250px;
@@ -327,7 +327,7 @@ h3.spec {
 }
 
 #home-slider .slide-content {
-	font-size: 60px;
+	font-size: 48px;
 	color: #FFFFFF;
 	letter-spacing: -3px;
 	text-transform: uppercase;	
