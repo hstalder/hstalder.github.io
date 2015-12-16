@@ -338,6 +338,8 @@ jQuery(function ($) {
 					if (Modernizr.mobile) { window.open(href, '_blank'); }
 				} else if (icon.hasClass("font-icon-social-email")) {
 					window.open(href, '_self');
+				} else if (icon.hasClass("font-icon-social-wordpress")) {
+					window.open(href, '_blank', 'location=yes');
 				}
 			}
 			e.preventDefault();
