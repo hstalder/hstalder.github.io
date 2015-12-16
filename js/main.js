@@ -209,9 +209,21 @@ jQuery(function ($) {
 	 ================================================== */
 
 	BRUSHED.contactForm = function () {
-		$("#contact-submit").on('click', function () {
-			var contact_form = $('#contact-form');
-			var fields = contact_form.serialize();
+		$("#contact-submit").on('click', function (e) {
+			e.preventDefault();
+			// var contact_form = $('#contact-form');
+			// var fields = contact_form.serialize();
+			var subject = $('#contact_subject');
+			var message = $('#contact_message');
+			var subjectText = subject.val() || '';
+			var messageText = message.val() || '';
+			var href = $('#contact-details-email').attr('href') + '?subject=';
+			if (subjectText.length > 0) href += subjectText;
+			else href += 'Kontakt-Formular';
+			if (messageText.length > 0) href += '&body=' + messageText;
+			window.open(href, '_self');
+			subject.val('');
+			message.val('');
 		});
 	};
 
@@ -238,7 +250,7 @@ jQuery(function ($) {
 
 	BRUSHED.goSection = function () {
 		$('#nextsection').on('click', function () {
-			$target = $($(this).attr('href')).offset().top - 30;
+			var $target = $($(this).attr('href')).offset().top - 30;
 
 			$('body, html').animate({scrollTop: $target}, 750, 'easeOutExpo');
 			return false;
@@ -251,7 +263,7 @@ jQuery(function ($) {
 
 	BRUSHED.goUp = function () {
 		$('#goUp').on('click', function () {
-			$target = $($(this).attr('href')).offset().top - 30;
+			var $target = $($(this).attr('href')).offset().top - 30;
 
 			$('body, html').animate({scrollTop: $target}, 750, 'easeOutExpo');
 			return false;
