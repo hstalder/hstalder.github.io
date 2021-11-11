@@ -1,758 +1,162 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="de-CH"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="de-CH"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="de-CH"><![endif]-->
-<!--[if (IE 9)]><html class="no-js ie9" lang="de-CH"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="de-CH"> <!--<![endif]-->
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]><html class="no-js ie6" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" dir="ltr" lang="en-US"> <!--<![endif]-->
 <head>
 
-<!-- Meta Tags -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-<title>Melodrama Ch&ouml;rli Meierskappel</title>
+    <title>Dylan Places</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Melodrama-Chörli Chor Choere in Meierskappel Luzern" />
+    <link rel="profile" href="https://gmpg.org/xfn/11"/>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+    <link rel="pingback" href=""/>
 
-<!-- Mobile Specifics -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>   
-
-<!-- Mobile Internet Explorer ClearType Technology -->
-<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
-
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Main Style -->
-<link href="css/main.css" rel="stylesheet">
-
-<!-- Supersized -->
-<link href="css/supersized.css" rel="stylesheet">
-<link href="css/supersized.shutter.css" rel="stylesheet">
-
-<!-- FancyBox -->
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-
-<!-- Font Icons -->
-<link href="css/fonts.css" rel="stylesheet">
-
-<!-- Shortcodes -->
-<link href="css/shortcodes.css" rel="stylesheet">
-
-<!-- Responsive -->
-<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="#">
-
-<link rel="apple-touch-icon" href="#">
-<link rel="apple-touch-icon" sizes="114x114" href="#">
-<link rel="apple-touch-icon" sizes="72x72" href="#">
-<link rel="apple-touch-icon" sizes="144x144" href="#">
-
-<!-- Modernizr -->
-<script src="js/modernizr.js"></script>
-
+    <link rel="alternate" type="application/rss+xml" title="Dylan Places &raquo; Feed"
+          href="http://dylanplaces.com/?feed=rss2"/>
+    <link rel="alternate" type="application/rss+xml" title="Dylan Places &raquo; Comments Feed"
+          href="http://dylanplaces.com/?feed=comments-rss2"/>
+    <script type='text/javascript' src='l10n.js?ver=20101110'></script>
+    <script type='text/javascript' src='jquery.js?ver=1.6.1'></script>
+    <script type='text/javascript' src='modernizr.js?ver=2.0.6'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dylanplaces.com/xmlrpc.php?rsd"/>
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wlwmanifest.xml"/>
+    <link rel='index' title='Dylan Places' href=''/>
+    <meta name="generator" content="WordPress 3.2.1"/>
+    <!-- We need this for debugging -->
+    <meta name="template" content="Shell Lite 1.4.2"/>
 </head>
 
+<body class="home blog">
 
-<body>
+<div id="container" class="hfeed">
 
-<!-- This section is for Splash Screen -->
-<div class="ole">
-<section id="jSplash">
-	<div id="circle"></div>
-</section>
-</div>
-<!-- End of Splash Screen -->
+    <div id="header">
 
-<!-- Homepage Slider -->
-<div id="home-slider">	
-    <div class="overlay"></div>
 
-    <div class="slider-text">
-    	<div id="slidecaption"></div>
-    </div>   
-	
-	<div class="control-nav">
-        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
-        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
-        <ul id="slide-list"></ul>
-        
-        <a id="nextsection" href="#about"><i class="font-icon-arrow-simple-down"></i></a>
-    </div>
-</div>
-<!-- End Homepage Slider -->
-
-<!-- Header -->
-<header>
-    <div class="sticky-nav">
-    	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-        
         <div id="logo">
-        	<a id="goUp" href="#about" title="Brushed | Melodrama Webseite">Melodrama-Ch&ouml;rli Webseite</a>
-        </div>
-        
-        <nav id="menu">
-          <ul id="menu-nav">
-            <li class="current"><a href="#home-slider">Startseite</a></li>
-            <li><a href="#about">&Uuml;ber uns</a></li>
-            <li><a href="#work">Bildergalerie</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
-        </nav>
-        
-    </div>
-</header>
-<!-- End Header -->
-
-<!-- About Section -->
-<div id="about" class="page-alternate">
-  <div class="container">
-    <!-- Title Page -->
-    <div class="row">
-      <div class="span12">
-        <div class="title-page">
-          <h2 class="title">Über uns</h2>
-          <h3 class="title-description">Das <a href="http://www.meierskappel.ch/de/vereine/vereinsliste/welcome.php?action=showverein&verein_id=34132" target="_blank">Melodrama-Ch&ouml;rli Meierskappel</a> versch&ouml;nert Anl&auml;sse wie Geburtstags- und Jubil&auml;umsfeste mit Musik und Gesang.<br>Lernen Sie unsere S&auml;nger und Musiker kennen:</h3>
-        </div>
-      </div>
-    </div>
-    <!-- End Title Page -->
-
-    <!-- People -->
-    <div class="row">
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">Dirigent &amp; S&auml;nger<br>Tenor<br>Bassgeige</span>
-          </div>
-          <img src="img/profile/werni.jpg" alt="Werner Aebersold">
-        </div>
-        <h3 class="profile-name">Werner Aebersold</h3>
-        <p class="profile-description">Wohnhaft in Adligenswil LU, verheiratet, ein Sohn, eine Tochter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:aebersold.werner@bluewin.ch"><i class="font-icon-social-email"></i></a></li>
-            <li><a href="http://www.aimag.ch" target="_blank"><i class="font-icon-social-wordpress"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">Musiker<br>Handorgel</span>
-          </div>
-          <img src="img/profile/hans.jpg" alt="Hans">
-        </div>
-        <h3 class="profile-name">Hans Fl&uuml;ck</h3>
-        <p class="profile-description">Wohnhaft in Eschenbach LU, verheiratet.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Bass<br>Holzrassel</span>
-          </div>
-          <img src="img/profile/berger.jpg" alt="Fredy Berger">
-        </div>
-        <h3 class="profile-name">Fredy Berger</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, ein Sohn, eine Tochter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:fredy.berger@bluewin.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Tenor<br>Besen</span>
-          </div>
-          <img src="img/profile/heggli.jpg" alt="Alfred Hegglin">
-        </div>
-        <h3 class="profile-name">Alfred Hegglin</h3>
-        <p class="profile-description">Wohnhaft in Rotkreuz ZG, verheiratet, zwei S&ouml;hne.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:fredyhegglin@gmx.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Tenor<br>Holzkiste</span>
-          </div>
-          <img src="img/profile/bruno.jpg" alt="Bruno Huber">
-        </div>
-        <h3 class="profile-name">Bruno Huber</h3>
-        <p class="profile-description">Wohnhaft in Sins AG, zwei T&ouml;chter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:bruno.huber@vitogaz.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Bass<br>Waschbrett</span>
-          </div>
-          <img src="img/profile/mauro.jpg" alt="Maurizio Rapacchi">
-        </div>
-        <h3 class="profile-name">Maurizio Rapacchi</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, zwei T&ouml;chter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:rapacchi@datazug.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Tenor<br>L&ouml;ffel</span>
-          </div>
-          <img src="img/profile/kari.jpg" alt="Kari Reding">
-        </div>
-        <h3 class="profile-name">Kari Reding</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, ein Sohn, eine Tochter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Tenor<br>Holzkiste</span>
-          </div>
-          <img src="img/profile/fritz.jpg" alt="Fritz Schnyder">
-        </div>
-        <h3 class="profile-name">Fritz Schnyder</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, zwei S&ouml;hne, zwei T&ouml;chter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:chaeshuette@bluewin.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Bass<br>Holzrassel</span>
-          </div>
-          <img src="img/profile/sidler.jpg" alt="Walter Sidler">
-        </div>
-        <h3 class="profile-name">Walter Sidler</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, drei T&ouml;chter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:info@sidler-schweine.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Bass<br>Waschbrett</span>
-          </div>
-          <img src="img/profile/hugo.jpg" alt="Hugo Stalder">
-        </div>
-        <h3 class="profile-name">Hugo Stalder</h3>
-        <p class="profile-description">Wohnhaft in Meierskappel LU, verheiratet, zwei erwachsene S&ouml;hne. Von Beruf Software-Ingenieur. Mitglied im Turnverein Meierskappel.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="twitter://user?screen_name=Hoogi46"><i class="font-icon-social-twitter"></i></a></li>
-            <li><a href="fb://profile/hugo.stalder.9"><i class="font-icon-social-facebook"></i></a></li>
-            <li><a href="gplus://plus.google.com/+HugoStalder"><i class="font-icon-social-google-plus"></i></a></li>
-            <li><a href="mailto:hugo.stalder@sunrise.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-      <!-- Start Profile -->
-      <div class="span3 profile">
-        <div class="image-wrap">
-          <div class="hover-wrap">
-            <span class="overlay-img"></span>
-            <span class="overlay-text-thumb">S&auml;nger<br>Tenor<br>Talerbecken</span>
-          </div>
-          <img src="img/profile/troxler.jpg" alt="Walter Troxler">
-        </div>
-        <h3 class="profile-name">Walter Troxler</h3>
-        <p class="profile-description">Wohnhaft in Ober&auml;geri ZG, verheiratet, ein Sohn, eine Tochter.</p>
-
-        <div class="social">
-          <ul class="social-icons">
-            <li><a href="mailto:w.troxler@gmx.ch"><i class="font-icon-social-email"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End Profile -->
-
-    </div>
-    <!-- End People -->
-  </div>
-</div>
-<!-- End About Section -->
+            <a href="http://dylanplaces.com/"><img src="dylan_5.png" width="300" height="100"
+                                                   alt="Bob Dylan song places"/></a>
+        </div><!-- end of #logo -->
 
 
-<!-- Gallery Section -->
-<div id="work" class="page">
-	<div class="container">
-    	<!-- Title Page -->
-        <div class="row">
-            <div class="span12">
-                <div class="title-page">
-                    <h2 class="title">Bildergalerie</h2>
-                    <h3 class="title-description">Hier ein paar Impressionen von unseren Ausfl&uuml;gen &amp; Auftritten:</h3>
+        <div id="search-box">
+            <form method="get" id="searchform" action="http://dylanplaces.com/">
+                <label for="s"></label><input type="text" class="field" name="s" id="s"/>
+                <input type="submit" class="submit" name="submit" id="searchsubmit" value="Go"/>
+            </form>
+        </div><!-- end of #search-box -->
+
+        <ul class="social-icons">
+            <li class="twitter-icon"><a href="https://twitter.com/#!/Hoogi46"><img src="twitter-icon-small.png"
+                                                                                   alt="Twitter"></a></li>
+            <li class="facebook-icon"><a href="http://www.facebook.com/profile.php?id=536293351"><img
+                    src="facebook-icon-small.png" alt="Facebook"></a></li>
+        </ul><!-- end of .social-icons -->
+
+        <ul id="menu-ein-neues-menu" class="menu">
+            <li id="menu-item-5"
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-5">
+                <a href="http://dylanplaces.com/">Home</a></li>
+        </ul>
+
+    </div><!-- end of #header -->
+
+    <div id="wrapper" class="clearfix">
+
+        <div id="content-full" class="grid col-940">
+
+            <h1 class="featured-title">Dylan Places</h1>
+            <div class="grid col-300">
+
+                <img src="dylan3.png" width="237" height="296" alt=""/>
+
+            </div><!-- end of .col-300 -->
+
+            <div class="grid col-620 fit">
+
+                <h2 class="featured-subtitle">iOS/iPadOS App</h2>
+                <p>The <strong>Songs of Bob Dylan</strong> contain hundreds of references to geographical places and
+                    historical landmarks that inspired his music and songwriting. This interactive app for
+                    <strong>iPad</strong> and <strong>iPhone</strong> puts these places on a map and offers a new and
+                    refreshing approach to the work of one of the most influential figures in popular music.<br> Use the
+                    link below to get it from the App Store.</p>
+
+                <p><a href="https://apps.apple.com/ch/app/dylanplaces/id494225184?l=de&ls=1"><img
+                        src="featured-button.png" alt="AppStore"/></a></p>
+
+
+            </div><!-- end of .col-460 fit -->
+
+        </div><!-- end of #content-full -->
+
+
+        <div id="widgets">
+            <div class="grid col-300">
+
+                <div class="widget-title-home"><h3>App Description</h3></div>
+                <div class="textwidget">Have you ever wondered where Ashtabula, Brownsville or Delacroix is? Or where
+                    «Tangled Up In Blue» was recorded? Or what the story is behind musical landmarks like «Where the
+                    Southern crosses the Yellow Dog» or «Twelfth Street & Vine»? Then jump right into this journey from
+                    the great north woods to the streets of New York Town and beyond. You never know, maybe you end up
+                    visiting that mystical intersection at 56th and Wabasha!<br><br>• Navigate through the interactive
+                    map and investigate the location and history of both recording venues and lyrical places, search for
+                    Dylan places in your area.<br>• Browse through all official albums, songs and different versions of
+                    songs, visualize locations that are related to albums or songs in the map, find out where the songs
+                    were recorded.<br>• Check out the song lyrics on Bob Dylan's homepage and read background
+                    information about the locations in Wikipedia.<br>• Play songs that you own directly in the app
+                    (Apple Music integration), make use of the spatial perspective to listen to songs or different
+                    versions of the same song.
                 </div>
-            </div>
-        </div>
-        <!-- End Title Page -->
-        
-        <!-- Portfolio Projects -->
-        <div class="row">
-        	<div class="span3">
-            	<!-- Filter -->
-                <nav id="options" class="work-nav">
-                    <ul id="filters" class="option-set" data-option-key="filter">
-                    	<li class="type-work">Bilder</li>
-                        <li><a href="#filter" data-option-value="*" class="selected">Alle</a></li>
-                        <li><a href="#filter" data-option-value=".ausflug17">Ausflug 2017</a></li>
-                        <li><a href="#filter" data-option-value=".ausflug15">Ausflug 2015</a></li>
-                        <li><a href="#filter" data-option-value=".ausflug14">Ausflug 2014</a></li>
-                        <li><a href="#filter" data-option-value=".ausflug11">Ausflug 2011</a></li>
-                        <li><a href="#filter" data-option-value=".ausflug09">Ausflug 2009</a></li>
-                        <li><a href="#filter" data-option-value=".video">Video</a></li>
-                    </ul>
-                </nav>
-                <!-- End Filter -->
-            </div>
-            
-            <div class="span9">
-            	<div class="row">
-                	<section id="projects">
-                    	<ul id="thumbs">
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug15">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="In der Weinstube" href="img/work/full/image-05-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-05.jpg" alt="Ausflug nach Meersburg/Bodensee, August 2015">
-                        </li>
-                        <!-- End Item Project -->
+            </div><!-- end of .col-300 -->
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug15">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Neues Schloss" href="img/work/full/image-06-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-06.jpg" alt="Ausflug nach Meersburg/Bodensee, August 2015">
-                        </li>
-                        <!-- End Item Project -->
+            <div class="grid col-300">
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug15">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Hotel Zum Schiff" href="img/work/full/image-07-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-07.jpg" alt="Ausflug nach Meersburg/Bodensee, August 2015">
-                        </li>
-                        <!-- End Item Project -->
+                <div class="widget-title-home"><h3>About Us</h3></div>
+                <div class="textwidget">There's a voice that keeps on calling me. Down the road, that's where I'll
+                    always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm
+                    gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.
+                </div>
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug15">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Burgbesichtigung" href="img/work/full/image-08-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-08.jpg" alt="Ausflug nach Meersburg/Bodensee, August 2015">
-                        </li>
-                        <!-- End Item Project -->
+            </div><!-- end of .col-300 -->
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug14">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Im Schiff nach Weggis" href="img/work/full/image-01-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-01.jpg" alt="Ausflug Weggis/Beckenried, August 2014">
-                        </li>
-                        <!-- End Item Project -->
+            <div class="grid col-300 fit">
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug14">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Anlegesteg L&uuml;tzelau" href="img/work/full/image-02-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-02.jpg" alt="Ausflug Weggis/Beckenried, August 2014">
-                        </li>
-                        <!-- End Item Project -->
+                <div class="widget-title-home"><h3>Support</h3></div>
+                <div class="textwidget">Send an <a href="mailto:hugo.stalder@greenmail.ch">eMail</a> or use the <strong>Twitter</strong>
+                    or <strong>Facebook</strong> link on top of the page.<br><br>Apart from reporting bugs and errors in
+                    the App, we would also appreciate feedback about missing places, wikipedia links or places we didn't
+                    assign to the correct physical location.
+                </div>
+                <div class="widget-title-home"><h3>App Privacy Policy</h3></div>
+                <div class="textwidget">The app "Dylan Places" does not collect, store or process any data of the user or the device, nor does it transmit any data to the operators of the website or to the developers of the app.</div>
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug14">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Probe im Restaurant L&uuml;tzelau" href="img/work/full/image-03-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-03.jpg" alt="Ausflug Weggis/Beckenried, August 2014">
-                        </li>
-                        <!-- End Item Project -->
+            </div><!-- end of .col-300 fit -->
+        </div><!-- end of #widgets -->    </div><!-- end of #wrapper -->
+</div><!-- end of #container -->
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug14">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Abendessen im Restaurant Hinterberg" href="img/work/full/image-04-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-04.jpg" alt="Ausflug Weggis/Beckenried, August 2014">
-                        </li>
-                        <!-- End Item Project -->
+<div id="footer">
+    <div id="footer-wrapper">
+        <div class="grid col-300 copyright">
+            &copy; 2021<a href="http://dylanplaces.com/" title="Dylan Places">
+            Dylan Places </a>
+        </div><!-- end of .copyright -->
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug11">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="M&ouml;rlialp" href="img/work/full/image-09-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-09.jpg" alt="Ausflug Cham/S&ouml;renberg/M&ouml;rlialp, August 2011">
-                        </li>
-                        <!-- End Item Project -->
+        <div class="grid col-300 scroll-top"><a href="#" title="scroll to top">&uarr;</a></div>
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug11">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="F&auml;hre Beckenried nach Gersau" href="img/work/full/image-10-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-10.jpg" alt="Ausflug Cham/S&ouml;renberg/M&ouml;rlialp, August 2011">
-                        </li>
-                        <!-- End Item Project -->
+        <div class="grid col-300 fit powered">
+            <p>Powered by <a href="https://wordpress.org" title="WordPress">
+                WordPress</a> &amp; <a href="https://cyberchimps.com" title="ThemeID">
+                ThemeID</a></p>
+        </div><!-- end .powered -->
+    </div><!-- end #footer-wrapper -->
+</div><!-- end #footer -->
 
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug11">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Heubode" href="img/work/full/image-11-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-11.jpg" alt="M&ouml;rlialpAusflug Cham/S&ouml;renberg/M&ouml;rlialp, August 2011">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug11">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Restaurant Strauss, Meierskappel" href="img/work/full/image-12-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-12.jpg" alt="Ausflug Cham/S&ouml;renberg/M&ouml;rlialp, August 2011">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug09">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Furkabahn" href="img/work/full/image-17-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-17.jpg" alt="Ausflug nach Andermatt/Realp/Furka, August 2009">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug09">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Furkabahn" href="img/work/full/image-18-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-18.jpg" alt="Ausflug nach Andermatt/Realp/Furka, August 2009">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug09">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Unterwegs zum Hotel Furkablick " href="img/work/full/image-19-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-19.jpg" alt="Ausflug nach Andermatt/Realp/Furka, August 2009">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug09">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Klein Furkahorn" href="img/work/full/image-20-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-20.jpg" alt="Ausflug nach Andermatt/Realp/Furka, August 2009">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug17">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Auftritt Geburtstagsessen" href="img/work/full/image-21-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-21.jpg" alt="Ausflug nach San Benedetto Po, Mai 2017">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug17">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Auftritt Geburtstagsessen" href="img/work/full/image-22-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-22.jpg" alt="Ausflug nach San Benedetto Po, Mai 2017">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug17">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Auftritt Geburtstagsessen" href="img/work/full/image-23-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-23.jpg" alt="Ausflug nach San Benedetto Po, Mai 2017">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 ausflug17">
-                          <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                          <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Familie Rapacchi" href="img/work/full/image-24-full.jpg">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-24.jpg" alt="Ausflug nach San Benedetto Po, Mai 2017">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 video">
-                          <!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                          <a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Youtube" href="https://youtu.be/Py6GbxZ8fVY">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-13.jpg" alt="Ausflug Cham/S&ouml;renberg/M&ouml;rlialp, August 2011">
-                        </li>
-                        <!-- End Item Project -->
-
-                        <!-- Item Project and Filter Name -->
-                        <li class="item-thumbs span3 video">
-                          <!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
-                          <a class="hover-wrap fancybox-media" data-fancybox-group="video" title="Video Content From Vimeo" href="http://vimeo.com/50834315">
-                            <span class="overlay-img"></span>
-                            <span class="overlay-img-thumb font-icon-plus"></span>
-                          </a>
-                          <!-- Thumb Image and Description -->
-                          <img src="img/work/thumbs/image-14.jpg" alt="Video">
-                        </li>
-                        <!-- End Item Project -->
-
-                        </ul>
-                    </section>
-                    
-            	</div>
-            </div>
-        </div>
-        <!-- End Portfolio Projects -->
-    </div>
-</div>
-<!-- End Gallery Section -->
-
-<!-- Contact Section -->
-<div id="contact" class="page">
-  <div class="container">
-    <!-- Title Page -->
-    <div class="row">
-      <div class="span12">
-        <div class="title-page">
-          <h2 class="title">Nimm mit uns Kontakt auf!</h2>
-          <h3 class="title-description"></h3>
-        </div>
-      </div>
-    </div>
-    <!-- End Title Page -->
-
-    <!-- Contact Form -->
-    <div class="row">
-      <div class="span9">
-
-        <form id="contact-form" class="contact-form" action="#">
-          <p class="contact-subject">
-            <input id="contact_subject" type="text" placeholder="Betreff" value="" name="subject" />
-          </p>
-          <p class="contact-message">
-            <textarea id="contact_message" placeholder="Deine Meldung" name="body" rows="15" cols="40"></textarea>
-          </p>
-          <p class="contact-submit">
-            <a id="contact-submit" class="submit" href="#contact">Sende Email</a>
-          </p>
-        </form>
-
-      </div>
-
-      <div class="span3">
-        <div class="contact-details">
-          <h3>Kontakt Detail</h3>
-          <ul>
-            <li>
-              Walter Sidler
-              <br>
-              Rain 2
-              <br>
-              6344 Meierskappel
-            </li>
-            <li><a id="contact-details-email" href="mailto:info@sidler-schweine.ch">info(at)sidler-schweine.ch</a></li>
-            <li>(041) 790 42 37</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- End Contact Form -->
-
-  </div>
-</div>
-<!-- End Contact Section -->
-
-<!-- Footer -->
-<footer>
-	<p class="credits">&copy;2013 Brushed. <a href="http://themes.alessioatzeni.com/html/brushed/" title="Brushed | Responsive One Page Template">Brushed Template</a> by <a href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Web Designer &amp; Front-end Developer">Alessio Atzeni</a><br>
-    <span>Webmaster: Hugo Stalder, E-Mail @ <a href="mailto:hugo.stalder@sunrise.ch">hugo.stalder(at)sunrise.ch</a></span>
-  </p>
-</footer>
-<!-- End Footer -->
-
-<!-- Back To Top -->
-<a id="back-to-top" href="#">
-	<i class="font-icon-arrow-simple-up"></i>
-</a>
-<!-- End Back to Top -->
-
-
-<!-- Js -->
-<script src="js/jquery.min.js"></script> <!-- jQuery 1.9.1 Core -->
-<script src="js/bootstrap.min.js"></script> <!-- Bootstrap -->
-<script src="js/supersized.3.2.7.min.js"></script> <!-- Slider -->
-<script src="js/waypoints.js"></script> <!-- WayPoints -->
-<script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
-<script src="js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-<script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
-<script src="js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
-<script src="js/jquery.touch.ms.js"></script> <!-- touch functions -->
-<script src="js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="js/main.js"></script> <!-- Default JS -->
-<!-- End Js -->
-
+<script type='text/javascript' src='scripts.js?ver=1.0.4'></script>
 </body>
 </html>
